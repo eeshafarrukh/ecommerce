@@ -1,22 +1,19 @@
 # frozen_string_literal: true
-
 require 'colorize'
-
 module Helper
-  def update_max_temp(date, current_max_temp, max_temp)
-    if max_temp[0] < current_max_temp
-      max_temp[0] = current_max_temp
-      max_temp[1] = date
-    end
-    max_temp
-  end
-
   def update_min_temp(date, current_min_temp, min_temp)
     if min_temp[0] > current_min_temp
       min_temp[0] = current_min_temp
       min_temp[1] = date
     end
     min_temp
+  end
+  def update_max_temp(date, current_max_temp, max_temp)
+    if max_temp[0] < current_max_temp
+      max_temp[0] = current_max_temp
+      max_temp[1] = date
+    end
+    max_temp
   end
 
   def update_max_humidity(date, current_max_humidity, max_humidity)
